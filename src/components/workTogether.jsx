@@ -3,8 +3,8 @@ import PrimaryButton from "./UI/PrimaryButton";
 
 const WorkTogetherSection = () => {
   return (
-    <Container size="lg" className="py-16 px-20">
-      <div className="flex flex-col md:flex-row items-center gap-20">
+    <Container size="lg" className=" px-20">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-20">
         {/* Left Content */}
         <div className="flex-1">
           <img src="./img2.png" alt="" />

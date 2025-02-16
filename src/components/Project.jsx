@@ -3,7 +3,7 @@ import PrimaryButton from "./UI/PrimaryButton";
 
 const ProjectSection = () => {
   return (
-    <Container size="lg" className="py-16 px-20">
+    <Container size="lg" className="pt-8 px-20">
       <div className="flex flex-col justify-end md:flex-row  items-center gap-44">
         {/* Left Content */}
         <div className="max-w-[500px] space-y-6">
