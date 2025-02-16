@@ -33,19 +33,17 @@ const TestimonialCarousel = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-12">
-          What Our Clients Says
-        
-        </h2>
+        <h2 className="text-3xl font-bold mb-12">What Our Clients Say</h2>
 
-        <div className="flex gap-6 w-full justify-center">
+        {/* Testimonials Container */}
+        <div className="flex md:flex-row flex-col items-center w-full justify-center gap-6 overflow-hidden">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`${
+              className={`rounded-lg p-8 shadow-lg transition-all duration-300 w-full max-w-sm ${
                 testimonial.bgColor
-              } rounded-lg p-8 shadow-lg transition-all duration-300 w-full max-w-sm ${
-                index === activeIndex ? 'scale-105' : 'scale-95'
+              } ${index === activeIndex ? 'scale-105' : 'scale-95'} ${
+                index === activeIndex ? "block" : "hidden md:block"
               }`}
             >
               <div className="mb-6">
@@ -54,17 +52,13 @@ const TestimonialCarousel = () => {
                   {testimonial.quote}
                 </p>
               </div>
-               <div>
-                {/* Border Line */}
-                <div className="border border-black w-full " />
-                
-               </div>
+
+              {/* Border Line */}
+              <div className="border border-black w-full" />
+
+              {/* Profile Section */}
               <div className="flex items-center mt-6">
-                <img
-                    src={testimonial.img}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
-                />
+                <img src={testimonial.img} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" />
                 <div>
                   <h3 className={`font-medium ${index === 0 ? 'text-gray-800' : 'text-white'}`}>
                     {testimonial.name}
@@ -78,7 +72,8 @@ const TestimonialCarousel = () => {
           ))}
         </div>
 
-        <div className="flex gap-2 mt-8">
+        {/* Navigation Dots for Small Screens */}
+        <div className="flex gap-2 mt-8 md:hidden">
           {testimonials.map((_, index) => (
             <button
               key={index}
