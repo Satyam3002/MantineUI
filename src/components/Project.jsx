@@ -3,8 +3,8 @@ import PrimaryButton from "./UI/PrimaryButton";
 
 const ProjectSection = () => {
   return (
-    <Container size="lg" className="pt-8 px-20">
-      <div className="flex flex-col justify-end md:flex-row  items-center gap-44">
+    <Container size="lg" className="pt-12 px-20">
+      <div className="flex flex-col justify-end md:flex-row  items-center gap-20">
         {/* Left Content */}
         <div className="max-w-[500px] space-y-6">
           <Title className="text-4xl md:text-5xl font-bold">
@@ -24,7 +24,7 @@ const ProjectSection = () => {
 
         {/* Right Content*/}
         <div className="flex-1">
-          <div className=" rounded-lg w-full h-[500px]">
+          <div className=" rounded-lg w-full ">
           <img src="./image.png" alt="" />
           </div>
 
