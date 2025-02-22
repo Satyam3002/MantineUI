@@ -1,0 +1,138 @@
+.Container1 {
+    padding: 0px 172px;
+}
+.courses-grid {
+    display: grid;   
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 40px;
+   
+  }
+  @media (max-width: 1024px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+  .course-card {
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    max-width: 100%;
+    width: 420px;
+    border-radius: 8px;
+  }
+  
+
+  
+  .course-header {
+  
+    padding: 24px;
+    height: 200px; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+  }
+  
+
+  
+  .rating-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border-radius: 8px !important; 
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: white; 
+  }
+  
+  .exploreoption {
+    display: "flex";
+    width: "100%";
+    justify-content: "space-between";
+     align-items: center;
+  
+  }
+  .exploreoption button {
+    background-color: transparent;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .course-card:hover .exploreoption button {
+    background-color: green;
+    color: white;
+  }
+  
+  .challenge-text {
+    margin-bottom: 8px;
+  }
+  
+  .header-title {
+    font-size: 20px; 
+  }
+  
+  .header-icon {
+    position: absolute;
+    right: -8px; 
+  }
+  
+  .card-content {
+    margin-top:20px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: start !important;
+    align-items: start !important;
+    padding: 24px !important; 
+
+    gap: 12px;
+    
+
+    
+  }
+  .course-header-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 82px;
+    margin-bottom: 42px;
+   
+}
+
+  
+  .refund-badge {
+    background-color: #ffd700;
+    padding: 12px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 14px;
+    border-radius: 8px;
+  }
+  .CoursesText {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+   padding-top: 20px;
+
+  }
+  .viewbtn {
+    padding: 8px 16px;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+  }

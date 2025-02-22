@@ -1,24 +1,22 @@
-import HeroSection from './components/Home';
-import ProjectAndWorkSections from './components/Project';
-import WorkTogetherSection from './components/workTogether';
-import PricingPlans from './components/Pricing';
-import SponsorsSection from './components/Sponsor';
-import TestimonialCarousel from './components/Testimonial';
-import AppIntegrationHero from './components/Appintegre';
-import Footer from './components/footer';
+import Navbar from './components/Navbar/Navbar';
+import SearchTypingAnimation from './components/SearchBox/page';
+import CoursesSection from './components/Course/page';
+import Footer from './components/Footer/page';
+import MustExplore from './components/MustExplore/page';
+import Explore from './components/Explore/page';
+
 
 function App() {
   return (
     <div className="">
-        <HeroSection />
-        <ProjectAndWorkSections />
-        <WorkTogetherSection />
-        <PricingPlans />
-        <SponsorsSection />
-        <AppIntegrationHero />
-        <TestimonialCarousel />
+    
+        <Navbar />
+       <SearchTypingAnimation />
+        <CoursesSection />
+        <MustExplore />
+        <Explore />
         <Footer />
-
+        
     </div>
   );
 }

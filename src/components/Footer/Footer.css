@@ -1,0 +1,105 @@
+.footer {
+    background-color: #ffffff;
+    padding: 72px 24px;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 48px;
+  }
+  
+  .company-info {
+    gap: 24px;
+  }
+  
+  .address-section {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .address-section .group {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .social-button {
+    padding: 8px;
+    color: #4a4a4a;
+    margin: 20px 0;
+  }
+  
+  .app-links {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .advertise-button {
+    background-color: #1e3a8a;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: white;
+  }
+  
+  .footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  
+  .section-title {
+    color: #079b1f;
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .footer-link {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer-link:hover {
+    color: #1e3a8a;
+  }
+  
+  @media (max-width: 1200px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .company-info {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-sections {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }

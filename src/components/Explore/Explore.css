@@ -1,0 +1,117 @@
+.explore-container1 {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2c3338;
+    margin-bottom: 1.5rem;
+  }
+  
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .explore-card {
+    padding: 6rem !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    min-height: 160px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; 
+    align-items: center !important; 
+    transition: transform 0.2s ease-in-out !important;
+    text-align: center; 
+  }
+  
+  .explore-card:hover {
+    transform: translateY(-4px);
+  }
+  
+
+  .explore-card.emerald {
+    background-color: #34d399 !important;
+  }
+  
+  .explore-card.indigo {
+    background-color: #818cf8 !important;
+  }
+  
+  .explore-card.rose {
+    background-color: #fb7185 !important;
+  }
+  
+  .explore-card.purple {
+    background-color: #a855f7 !important;
+  }
+  
+  .explore-card.teal {
+    background-color: #2dd4bf !important;
+  }
+  
+  .explore-card.blue {
+    background-color: #60a5fa !important;
+  }
+  
+  .explore-card.orange {
+    background-color: #fb923c !important;
+  }
+  
+  .explore-card.pink {
+    background-color: #f472b6 !important;
+  }
+  
+  .card-title {
+    color: white !important;
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 1.5rem !important; 
+    text-align: center; 
+  }
+  
+  .view-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.2s ease-in-out;
+    margin: 0 auto; 
+  }
+  
+  .view-more-btn:hover {
+    background: rgb(255, 255, 255);
+    color: green !important;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .explore-card {
+      min-height: 140px;
+      padding: 4rem !important; 
+    }
+  }
+  
+  /* Container padding on smaller screens */
+  @media (max-width: 1200px) {
+    .explore-container {
+      padding: 2rem 1rem;
+    }
+  }
