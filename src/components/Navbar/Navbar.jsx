@@ -4,21 +4,8 @@ import { Burger, Drawer, Button, Menu as MantineMenu, Group, Text, Divider } fro
 import "@mantine/core/styles.css";
 
 const menuItems = {
-  Courses: [
-    "For Working Professionals",
-    "Data Structures & Algorithms",
-    "Complete Interview Preparation",
-    "All Courses"
-  ],
-  Tutorials: [
-    "Java",
-    "Python",
-    "C++",
-    "JavaScript",
-    "Web Development",
-    "Machine Learning",
-    "View All"
-  ],
+  Courses: ["For Working Professionals", "Data Structures & Algorithms", "Complete Interview Preparation", "All Courses"],
+  Tutorials: ["Java", "Python", "C++", "JavaScript", "Web Development", "Machine Learning", "View All"],
   Jobs: ["Apply for Jobs", "Hire with us", "Job Events & Contests", "Resume Resources"],
   Practice: ["Problem of the Day", "Topic Wise Practice", "Company Wise Practice", "Contests"],
   Contests: ["GfG Weekly [Rated Contest]", "Job-A-Thon Hiring Challenge", "All Contests and Events"]
@@ -36,10 +23,11 @@ const Navbar = () => {
   return (
     <nav style={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1000, backgroundColor: "white", borderBottom: "1px solid #e5e7eb", padding: "1rem 0rem" }}>
       <Group position="apart" justify="space-between" style={{ padding: "0 1rem" }}>
+        
         {/* Left Section */}
         <Group spacing="md" visibleFrom="lg">
           {Object.entries(menuItems).map(([category, items]) => (
-            <MantineMenu key={category} shadow="md" width={220} withinPortal>
+            <MantineMenu key={category} trigger="hover" openDelay={0} closeDelay={200} withinPortal>
               <MantineMenu.Target>
                 <Button 
                   variant="subtle" 
@@ -50,7 +38,7 @@ const Navbar = () => {
                   {category}
                 </Button>
               </MantineMenu.Target>
-              <MantineMenu.Dropdown style={{ zIndex: 1100 }}> 
+              <MantineMenu.Dropdown style={{ zIndex: 1200, borderTop: "6px solid #03C03C" }}>
                 {items.map((item, index) => (
                   <MantineMenu.Item key={index}>{item}</MantineMenu.Item>
                 ))}
@@ -79,7 +67,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <Drawer opened={mobileMenuOpened} onClose={() => setMobileMenuOpened(false)} padding="md" title="Menu">
         {Object.entries(menuItems).map(([category, items]) => (
-          <div key={category}>
+          <div key={category} style={{border: "4px solid #03C03C", padding: "0.5rem 0"}}>
             <Text weight={500}>{category}</Text>
             {items.map((item, index) => (
               <Text key={index} style={{ paddingLeft: "1rem" }}>{item}</Text>
@@ -89,7 +77,7 @@ const Navbar = () => {
       </Drawer>
 
       {/* Trending Bar */}
-      <div style={{ display: "flex", gap: "3rem", padding: "0.3rem 2rem", overflowX: "auto", whiteSpace: "nowrap" }}>
+      <div style={{ display: "flex", gap: "3rem", padding: "0.3rem 2rem", overflowX: "auto", whiteSpace: "nowrap", position: "relative", zIndex: 100 }}>
         {trendingItems.map((item) => (
           <span key={item} style={{ fontSize: "0.875rem", cursor: "pointer" }}>{item}</span>
         ))}
@@ -99,19 +87,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-/* CSS */
-const styles = `
-  .menu-button:hover .menu-arrow {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-  }
-
-  /* Ensure dropdown is on top */
-  .mantine-Menu-dropdown {
-    z-index: 1100 !important;
-  }
-`;
-const styleTag = document.createElement("style");
-styleTag.innerHTML = styles;
-document.head.appendChild(styleTag);
