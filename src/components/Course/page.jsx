@@ -129,7 +129,7 @@ const CoursesSection = () => {
 
   return (
     <Container className="Container1">
-      <Group  className="course-header-group" position="apart" >
+      <Group  className="course-header-group" >
         <Title order={2} className="CoursesText"  >Courses</Title>
         <Button className="viewbtn" variant="outline" radius="xl">
           View All
