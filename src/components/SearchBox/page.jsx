@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { TextInput, Button, Container, Title, Group } from "@mantine/core";
+import { Search } from "lucide-react";
 
 const SearchTypingAnimation = () => {
   const phrases = [
-    'GeeksforGeeks courses',
-    'Complete Interview Preparation',
-    'Learn Python C++ JavaScript'
+    "GeeksforGeeks courses",
+    "Complete Interview Preparation",
+    "Learn Python C++ JavaScript",
   ];
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [phraseIndex, setPhraseIndex] = useState(0);
 
@@ -40,48 +42,37 @@ const SearchTypingAnimation = () => {
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-[#e6fff8] to-[#ffffff] flex justify-center items-center">
-      <div className="flex flex-col items-center w-full max-w-4xl p-4">
-        <h1 className="text-4xl font-bold mb-8 text-center">
+      <Container className="flex flex-col items-center w-full max-w-4xl p-4">
+        <Title order={1} className="text-4xl font-bold mb-8 text-center">
           Hello, What Do You Want To Learn?
-        </h1>
+        </Title>
 
+        {/* Search Input Field */}
         <div className="relative w-full">
-          <input
-            type="text"
+          <TextInput
             value={text}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 text-lg"
             readOnly
             placeholder="Search..."
+            size="xl"
+            radius="md"
+            className="w-full px-4 py-8 rounded-lg focus:outline-none focus:border-blue-500 text-lg"
           />
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-            <svg
-              className="w-6 h-6 text-green-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </div>
+          <Search className="absolute pr-4  right-4 top-1/2 transform -translate-y-1/2 text-green-600" size={48} />
         </div>
 
-        <div className="flex gap-4 mt-4">
-          <button className="px-4 py-2 rounded-md bg-gray-200 border border-gray-300">
+        {/* Action Buttons */}
+        <Group spacing="md" mt="md">
+          <Button variant="outline" color="gray" radius="md">
             Master DS & ML
-          </button>
-          <button className="px-4 py-2 rounded-md bg-blue-900 text-white">
+          </Button>
+          <Button color="dark" radius="md">
             Courses @90% Refund
-          </button>
-          <button className="px-4 py-2 rounded-md bg-gray-200 border border-gray-300">
+          </Button>
+          <Button variant="outline" color="gray" radius="md">
             Full Stack Live Classes
-          </button>
-        </div>
-      </div>
+          </Button>
+        </Group>
+      </Container>
     </div>
   );
 };
