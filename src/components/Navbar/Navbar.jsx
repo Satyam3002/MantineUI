@@ -67,7 +67,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <Drawer opened={mobileMenuOpened} onClose={() => setMobileMenuOpened(false)} padding="md" title="Menu">
         {Object.entries(menuItems).map(([category, items]) => (
-          <div key={category} style={{border: "4px solid #03C03C", padding: "0.5rem 0"}}>
+          <div key={category} >
             <Text weight={500}>{category}</Text>
             {items.map((item, index) => (
               <Text key={index} style={{ paddingLeft: "1rem" }}>{item}</Text>
